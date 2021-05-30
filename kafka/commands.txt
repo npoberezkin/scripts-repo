@@ -1,0 +1,9 @@
+- producer
+kafka-console-producer.sh --broker-list <host:port> --topic <topic-name>
+ex: kafka-console-producer.sh --broker-list localhost:9092 --topic invoices.invoice
+
+- consumer
+kafka-console-consumer.sh --bootstrap-server <host:port> --topic <topic-name>
+
+- create topic
+kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 3 --topic create-topic-test

@@ -1,0 +1,6 @@
+hdfs dfs -ls -R /data/raw/invoice_event_valid/partition_id=2021040719 | awk '{print $8}' | \
+while read f;
+do   hdfs dfs -cat $f | grep -q 5eec9969bea80700019ae5bc && echo $f;
+done
+
+hdfs dfs -cat /data/raw/invoice_event_valid/partition_id=20210407*/* | grep 5eec9969bea80700019ae5bc

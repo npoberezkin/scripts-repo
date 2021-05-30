@@ -1,0 +1,2 @@
+- stop wsl without restarting windows
+wsl.exe --shutdown

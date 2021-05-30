@@ -1,0 +1,8 @@
+- dry run ansible playbook
+ansible-playbook <playbook> --diff --check [--extra-vars <var_name>=<var_value>]
+
+- run ansible playbook
+ansible-playbook <playbook> --diff [--extra-vars <var_name>=<var_value>]
+
+example GNIVC:
+ansible-playbook books/uz-nds/datalake-deploy.yml --diff --extra-vars uznds_datalake_migrations_version=1.0.0.142 --extra-vars uznds_datalake_version=1.0.0.143
